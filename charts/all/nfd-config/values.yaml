@@ -1,0 +1,3 @@
+nfd:
+  operand:
+    image: registry.redhat.io/openshift4/ose-node-feature-discovery@sha256:5f92998549dccf26d07138c2f556444e8a81ac41e53a398d9c3f43bc31c20a47
