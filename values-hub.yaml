@@ -3,6 +3,7 @@ clusterGroup:
   isHubCluster: true
   namespaces:
     - open-cluster-management
+    - mssql
     - vault
     - golang-external-secrets
     - openshift-nfd
@@ -21,6 +22,11 @@ clusterGroup:
     # Don't install RHOAI via validated patterns
     # RHOAI must be installed after service mesh and other dependencies are installed or it will break. 
     # The RHOAI Application will install the operator after a validation check has passed
+    mssql:
+      name: mssql
+      namespace: mssql
+      project: hub
+      path: charts/all/mssql
     nfd:
       name: nfd
       namespace: openshift-nfd
