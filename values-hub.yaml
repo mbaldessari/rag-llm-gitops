@@ -22,11 +22,6 @@ clusterGroup:
     # Don't install RHOAI via validated patterns
     # RHOAI must be installed after service mesh and other dependencies are installed or it will break. 
     # The RHOAI Application will install the operator after a validation check has passed
-    mssql:
-      name: mssql
-      namespace: mssql
-      project: hub
-      path: charts/all/mssql
     nfd:
       name: nfd
       namespace: openshift-nfd
@@ -82,6 +77,11 @@ clusterGroup:
   #   - '/overrides/values-{{ $.Values.global.hubClusterDomain }}.yaml'
   #   - '/overrides/values-{{ $.Values.global.localClusterDomain }}.yaml'
   applications:
+    mssql:
+      name: mssql
+      namespace: mssql
+      project: hub
+      path: charts/all/mssql
     vault:
       name: vault
       namespace: vault
